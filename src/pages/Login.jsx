@@ -15,27 +15,43 @@ export default function Login() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
-      <form onSubmit={submit} className="bg-white dark:bg-gray-800 p-8 rounded shadow w-80">
-        <h2 className="text-xl font-semibold text-center mb-4">Login</h2>
-        <input
-          className="input"
-          placeholder="Username"
-          value={form.username}
-          onChange={(e) => setForm({ ...form, username: e.target.value })}
-          required
-        />
-        <input
-          className="input mt-3"
-          type="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={(e) => setForm({ ...form, password: e.target.value })}
-          required
-        />
-        {err && <p className="text-red-500 text-sm mt-2">{err}</p>}
-        <button className="btn-primary mt-4 w-full">Sign in</button>
-      </form>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4 py-8">
+      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg">
+        <form onSubmit={submit} className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 text-gray-900 dark:text-white">
+            Login
+          </h2>
+          
+          <div className="space-y-4">
+            <input
+              className="input w-full"
+              placeholder="Username"
+              value={form.username}
+              onChange={(e) => setForm({ ...form, username: e.target.value })}
+              required
+            />
+            
+            <input
+              className="input w-full"
+              type="password"
+              placeholder="Password"
+              value={form.password}
+              onChange={(e) => setForm({ ...form, password: e.target.value })}
+              required
+            />
+            
+            {err && (
+              <p className="text-red-500 text-sm mt-2 text-center bg-red-50 dark:bg-red-900/20 p-2 rounded">
+                {err}
+              </p>
+            )}
+            
+            <button className="btn-primary w-full mt-6">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
