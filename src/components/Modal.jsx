@@ -17,22 +17,25 @@ export default function Modal({ initial, onClose, onSave }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
       <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded shadow w-11/12 max-w-md">
-        <h2 className="text-lg font-semibold mb-4">{initial ? 'Edit' : 'Add'} Employee</h2>
+        <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">
+  {initial ? 'Edit' : 'Add'} Employee
+</h2>
         <form onSubmit={handleSubmit}>
-          <input
-            className="input w-full mb-3"
-            placeholder="Full name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            required
-          />
-          <input
-            className="input w-full mb-3"
-            placeholder="Position"
-            value={form.position}
-            onChange={(e) => setForm({ ...form, position: e.target.value })}
-            required
-          />
+<input
+  className="w-full mb-3 px-3 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+  placeholder="Full name"
+  value={form.name}
+  onChange={(e) => setForm({ ...form, name: e.target.value })}
+  required
+/>
+<input
+  className="w-full mb-3 px-3 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+  placeholder="Position"
+  value={form.position}
+  onChange={(e) => setForm({ ...form, position: e.target.value })}
+  required
+/>
+
           <div className="flex flex-col sm:flex-row justify-end gap-2 mt-4">
             <button
               type="button"

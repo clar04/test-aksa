@@ -6,7 +6,7 @@ import Dropdown from './Dropdown';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
-  const { theme, setTheme } = useTheme(); // sudah benar pakai useTheme
+  const { theme, setTheme } = useTheme(); 
   const [open, setOpen] = useState(false);
 
   return (
@@ -43,24 +43,38 @@ export default function Navbar() {
             </button>
 
             {open && (
-              <Dropdown onClose={() => setOpen(false)}>
-                <Link 
-                  to="/profile" 
-                  className="dropdown-item"
-                  onClick={() => setOpen(false)}
-                >
-                  Edit Profile
-                </Link>
-                <button 
-                  onClick={() => {
-                    logout();
-                    setOpen(false);
-                  }} 
-                  className="dropdown-item"
-                >
-                  Logout
-                </button>
-              </Dropdown>
+            <Dropdown onClose={() => setOpen(false)}>
+  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+    <div className="font-semibold">Administrator</div>
+  </div>
+  <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
+    <li>
+      <Link
+        to="/profile"
+        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+        onClick={() => setOpen(false)}
+      >
+        Edit Profile
+      </Link>
+    </li>
+    <li>
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          logout();
+          setOpen(false);
+        }}
+        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+      >
+        Logout
+      </a>
+    </li>
+  </ul>
+</Dropdown>
+
+
+
             )}
           </div>
         )}
