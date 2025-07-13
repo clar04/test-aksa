@@ -6,11 +6,13 @@ import SearchBar from '../components/SearchBar';
 import Pagination from '../components/Pagination';
 import Modal from '../components/Modal';
 import TableRow from '../components/TableRow';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function Employees() {
   const [employees, setEmployees] = useLocalStorage('employees', []);
   const [modalOpen, setModalOpen] = useState(false);
   const [editTarget, setEditTarget] = useState(null);
+  const { theme } = useTheme();
 
   /* query string */
   const [searchParams, setSearchParams] = useSearchParams();
@@ -62,7 +64,7 @@ export default function Employees() {
       <div className="container mx-auto max-w-6xl">
         {/* Header section */}
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-white mb-4">
+          <h1 className={`${theme === 'light' ? 'text-gray-900' : 'text-white'} text-2xl font-bold mb-4`}>
             Employee Management
           </h1>
 
