@@ -15,16 +15,18 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4 py-8">
+    <div className="min-h-screen flex items-center justify-center
+            bg-[linear-gradient(135deg,var(--grad-from),var(--grad-to))]
+            px-4 py-8">
       <div className="w-full max-w-sm sm:max-w-md md:max-w-lg">
-        <form onSubmit={submit} className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg">
+        <form onSubmit={submit} className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg frosted-glass-bg">
           <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 text-gray-900 dark:text-white">
             Login
           </h2>
           
           <div className="space-y-4">
             <input
-              className="input w-full"
+              className="input w-full frosted-glass-input"
               placeholder="Username"
               value={form.username}
               onChange={(e) => setForm({ ...form, username: e.target.value })}
@@ -32,7 +34,7 @@ export default function Login() {
             />
             
             <input
-              className="input w-full"
+              className="input w-full frosted-glass-input"
               type="password"
               placeholder="Password"
               value={form.password}

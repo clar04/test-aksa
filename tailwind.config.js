@@ -4,8 +4,13 @@ export default {
     './index.html',
     './src/**/*.{js,jsx,ts,tsx}',
   ],
-  darkMode: 'class',   // memungkinkan switch + follow OS
-  theme: { extend: {} },
+  darkMode: 'class',  
+  theme: { extend: {
+    colors: {
+        'custom-purple': '#your-purple-hex', 
+        'custom-red': '#your-red-hex',       
+      },
+  } },
   plugins: [],
 };
 
