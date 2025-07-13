@@ -49,12 +49,12 @@ export default function Employees() {
 
   return (
     <div className="p-6">
-      <div className="flex justify-between items-center mb-4">
-        <SearchBar value={keyword} onChange={setKeyword} />
-        <button onClick={() => setModalOpen(true)} className="btn-primary">
-          + Add
-        </button>
-      </div>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4"> {/* Tambahkan flex-col untuk mobile, gap-4 */}
+  <SearchBar value={keyword} onChange={setKeyword} />
+  <button onClick={() => setModalOpen(true)} className="btn-primary w-full sm:w-auto"> {/* w-full untuk mobile, w-auto untuk desktop */}
+    + Add
+  </button>
+</div>
 
       <div className="overflow-x-auto">
         <table className="min-w-full border">

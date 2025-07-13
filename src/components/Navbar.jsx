@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className="bg-indigo-600 text-white px-4 py-2 flex justify-between items-center">
       <Link to="/employees" className="font-semibold">
-        Portfolio
+        Dashboard
       </Link>
 
       {user && (

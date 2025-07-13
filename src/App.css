@@ -1,8 +1,65 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+}
+
+@media (max-width: 639px) {
+
+  /* Untuk layar kecil, sebelum breakpoint sm */
+  table.min-w-full,
+  table.min-w-full thead,
+  table.min-w-full tbody,
+  table.min-w-full th,
+  table.min-w-full td,
+  table.min-w-full tr {
+    display: block;
+  }
+
+  table.min-w-full thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  table.min-w-full tr {
+    border: 1px solid #ccc;
+    margin-bottom: 0.75rem;
+    /* Sesuaikan dengan kebutuhan Tailwind */
+  }
+
+  table.min-w-full td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    /* Ruang untuk pseudo-element label */
+    text-align: right;
+  }
+
+  table.min-w-full td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /* Labels for each cell */
+  table.min-w-full td:nth-of-type(1):before {
+    content: "Name";
+  }
+
+  table.min-w-full td:nth-of-type(2):before {
+    content: "Position";
+  }
+
+  table.min-w-full td:nth-of-type(3):before {
+    content: "Action";
+  }
 }
 
 .logo {

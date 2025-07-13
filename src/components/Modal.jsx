@@ -16,7 +16,7 @@ export default function Modal({ initial, onClose, onSave }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded shadow w-full max-w-md">
+      <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded shadow w-11/12 max-w-md">
         <h2 className="text-lg font-semibold mb-4">{initial ? 'Edit' : 'Add'} Employee</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -33,7 +33,7 @@ export default function Modal({ initial, onClose, onSave }) {
             onChange={(e) => setForm({ ...form, position: e.target.value })}
             required
           />
-          <div className="flex justify-end gap-2 mt-4">
+          <div className="flex flex-col sm:flex-row justify-end gap-2 mt-4">
             <button
               type="button"
               onClick={onClose}
