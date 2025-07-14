@@ -45,7 +45,7 @@ export default function Navbar() {
             {open && (
             <Dropdown onClose={() => setOpen(false)}>
   <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-    <div className="font-semibold">Administrator</div>
+    <div className="font-semibold">{user.fullName}</div>
   </div>
   <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
     <li>
