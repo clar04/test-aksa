@@ -9,7 +9,7 @@ export function AuthProvider({ children }) {
 
   const login = (username, password) => {
     if (username === CREDENTIAL.username && password === CREDENTIAL.password) {
-      setUser({ username, fullName: 'Administrator' });
+      setUser({ username, fullName: 'admin' });
       return true;
     }
     return false;
