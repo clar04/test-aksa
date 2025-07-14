@@ -147,6 +147,19 @@ https://github.com/user-attachments/assets/173fc541-e1e1-47f1-879c-770014588f3f
 
 ---
 
+#### CRUD Lokal (Tanpa API)
+
+https://github.com/user-attachments/assets/1d7cc0ca-3f2b-45a5-9101-a832b658e719
+
+
+- Semua fitur CRUD berjalan.
+- Setelah refresh, data tetap ada.
+- Bisa mencari data berdasarkan field tertentu.
+- Pagination dibuat tanpa library dan bekerja dengan baik.
+- Setelah refresh, tetap berada di halaman dan filter yang sama melalui query string.
+
+---
+
 
 
 
