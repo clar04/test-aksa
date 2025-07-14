@@ -104,3 +104,18 @@ Upon successful login, you'll be redirected to the dashboard view.
 This project is deployed on [Vercel](https://testaksa-clara.vercel.app).
 
 ---
+
+## Demonstrasi
+
+#### Autentikasi (Tanpa API)
+
+
+https://github.com/user-attachments/assets/6a280ccb-1827-4622-9d02-f0cbf0992bc9
+
+
+- Login berhasil jika kredensial sesuai.  
+- Login gagal jika kredensial salah.  
+- Setelah refresh, user tetap login sampai melakukan logout manual.  
+- Nama user tampil di pojok kanan atas.  
+- Setelah logout, akses ke semua halaman (kecuali login) akan otomatis diarahkan ke halaman login.
+
