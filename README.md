@@ -160,6 +160,16 @@ https://github.com/user-attachments/assets/1d7cc0ca-3f2b-45a5-9101-a832b658e719
 
 ---
 
+#### UI/UX dan Responsiveness
+
+
+
+https://github.com/user-attachments/assets/77ff205f-d324-401e-9c65-24a58c5b3ee0
+
+
+- Desain responsif di semua ukuran layar: desktop, tablet, dan mobile.
+- UI hanya menggunakan Tailwind CSS, tanpa library UI lain.
+
 
 
 
