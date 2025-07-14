@@ -107,15 +107,46 @@ This project is deployed on [Vercel](https://testaksa-clara.vercel.app).
 
 ## Demonstrasi
 
-#### Autentikasi (Tanpa API)
+#### Autentikasi (Tanpa API) & Protected Routes / Access Control
 
 
 https://github.com/user-attachments/assets/6a280ccb-1827-4622-9d02-f0cbf0992bc9
 
 
+- Semua halaman selain login harus redirect jika belum login.
+- Akses akan otomatis diarahkan ke halaman login jika user belum login.
 - Login berhasil jika kredensial sesuai.  
 - Login gagal jika kredensial salah.  
 - Setelah refresh, user tetap login sampai melakukan logout manual.  
 - Nama user tampil di pojok kanan atas.  
 - Setelah logout, akses ke semua halaman (kecuali login) akan otomatis diarahkan ke halaman login.
+  
+---
+
+
+
+https://github.com/user-attachments/assets/173fc541-e1e1-47f1-879c-770014588f3f
+
+
+#### Navbar & Dropdown
+
+- Tidak menggunakan library, dropdown muncul dan hilang saat diklik.
+- Navbar responsif dan dapat digunakan dengan baik di perangkat mobile/tablet.
+
+#### Dark/Light Mode
+
+- Tersedia opsi pengaturan mode gelap/terang di UI.
+- Saat pertama kali dibuka, mode default mengikuti preferensi OS.
+- Jika mode OS berubah, aplikasi ikut berubah.
+
+#### Edit Profile
+
+- Data nama user dapat diubah.
+- Setelah diedit, nama di navbar langsung berubah.
+- Setelah refresh, nama tetap tersimpan.
+
+---
+
+
+
 
